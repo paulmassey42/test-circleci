@@ -36,7 +36,7 @@ jobs:
           command: echo $PWD; ls -al
       - run:
           name: command
-          command: ./checkout.sh
+          command: /home/circleci/project/checkout.sh
       - run:
           name: XXX
           command: echo $PWD; ls -al
