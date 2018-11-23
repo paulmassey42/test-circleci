@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 orbs:
     hello: circleci/hello-build@0.0.7 # uses the circleci/buildpack-deps Docker image
@@ -34,6 +34,9 @@ jobs:
       - run:
           name: test3
           command: echo $PWD; ls -al
+      - run:
+          name: chmod it
+          command: chmod 744 /home/circleci/project/checkout.sh
       - run:
           name: command
           command: /home/circleci/project/checkout.sh

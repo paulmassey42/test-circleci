@@ -54,7 +54,5 @@ for row in $(jq -r '.[] | select(.repository)  | @base64 ' publication.config) ;
 done
 
 for row in $(jq -r '.[] | select(.seealso)  | @base64 ' publication.config) ; do
-
    echo "start processing: $(_jq '.urlref')"
-
 done
